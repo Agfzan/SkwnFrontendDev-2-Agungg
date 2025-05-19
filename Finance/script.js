@@ -15,10 +15,12 @@ $(document).ready(function() {
     });
     
     $('.nav-item').click(function(e) {
-        if ($(this).attr('href') !== '#' && !$(this).hasClass('active')) {
+        const href = $(this).attr('href');
+        if (href === '#' || $(this).hasClass('active')) {
+            e.preventDefault();
+            return;
         }
         
-        e.preventDefault();
         $('.nav-item').removeClass('active');
         $(this).addClass('active');
         
