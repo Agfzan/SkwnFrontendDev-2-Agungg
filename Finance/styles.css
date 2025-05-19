@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding-bottom: 70px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 10px 0 20px;
+}
+
+.greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting p {
+    color: #666;
+    font-size: 16px;
+}
+
+.greeting h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #0077ff;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.see-all {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.card-section {
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.cards-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 5px 0;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-right: 50px;
+}
+
+.cards-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    background: linear-gradient(135deg, #0095ff, #0077ff);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 300px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 119, 255, 0.2);
+    scroll-snap-align: start;
+}
+
+.card.premium {
+    background: linear-gradient(135deg, #0095ff, #0077ff);
+}
+
+.card.regular {
+    background: linear-gradient(135deg, #4d8efd, #4d8efd);
+}
+
+.card.gold {
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+}
+
+.card.platinum {
+    background: linear-gradient(135deg, #BCC6CC, #98AFC7);
+}
+
+.card.partial {
+    min-width: 100px;
+}
+
+.chip-icon {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-name {
+    font-weight: 500;
+}
+
+.card-brand {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.services-section {
+    margin-bottom: 25px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #0077ff;
+    font-size: 20px;
+}
+
+.service-icon.card-service {
+    background-color: #e8f1ff;
+    color: #0077ff;
+}
+
+.service-icon.finance-service {
+    background-color: #e6f9f0;
+    color: #00c875;
+}
+
+.service-icon.topup-service {
+    background-color: #eee7ff;
+    color: #7b61ff;
+}
+
+.service-icon.help-service {
+    background-color: #eaf3fa;
+    color: #5c9ce6;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.activity-section {
+    margin-bottom: 25px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.activity-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.deposit .activity-icon {
+    background-color: #e6f9f0;
+    color: #00c875;
+}
+
+.withdraw .activity-icon {
+    background-color: #feeaea;
+    color: #ff3b30;
+}
+
+.activity-info {
+    flex-grow: 1;
+}
+
+.activity-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.activity-main h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.amount {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.deposit-amount {
+    color: #00c875;
+}
+
+.withdraw-amount {
+    color: #ff3b30;
+}
+
+.activity-date {
+    text-align: right;
+    font-size: 13px;
+    color: #666;
+}
+
+.time {
+    margin-top: 5px;
+}
+
+.activity-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #666;
+}
+
+.activity-item.partial {
+    opacity: 0.5;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 5px 15px;
+}
+
+.nav-item.active {
+    color: #0077ff;
+}
+
+.card, .service-icon, .activity-item {
+    transition: all 0.3s ease;
+}
+
+.card:hover, .service-icon:hover, .activity-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .cards-slider {
+        margin: 0 -15px;
+        padding: 5px 15px;
+        padding-right: 80px;
+    }
+    
+    .services {
+        justify-content: space-between;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .greeting h1 {
+        font-size: 24px;
+    }
+    
+    .service-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .card {
+        min-width: 280px;
+    }
+} 

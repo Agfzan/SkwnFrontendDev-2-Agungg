@@ -1,0 +1,160 @@
+/* Account Finance Page Styles */
+
+/* Header */
+.account-header {
+    background: linear-gradient(135deg, #0095ff, #00ccff);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    margin: -20px -20px 20px -20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn, .help-btn {
+    color: white;
+    font-size: 20px;
+}
+
+.account-header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.account-balance {
+    padding: 10px 0 20px;
+}
+
+.account-balance h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.account-balance .date {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Statistics Section */
+.statistics-section {
+    margin-bottom: 25px;
+}
+
+.chart-container {
+    display: flex;
+    height: 200px;
+    margin-top: 15px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.tick {
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.chart {
+    flex-grow: 1;
+    position: relative;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.month {
+    flex: 1;
+    text-align: center;
+}
+
+.month.active {
+    color: #0095ff;
+    font-weight: 500;
+}
+
+/* History Section */
+.history-section {
+    margin-bottom: 70px; /* Space for bottom nav */
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter i {
+    font-size: 12px;
+}
+
+/* Activity List for History */
+.history-section .activity-list {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.history-section .activity-item {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Add Transaction Button */
+.add-transaction-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #0095ff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-transaction-btn i {
+    margin-right: 8px;
+}
+
+.add-transaction-btn:hover {
+    background-color: #0077cc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .account-header {
+        padding: 15px;
+        margin: -15px -15px 15px -15px;
+    }
+    
+    .chart-container {
+        height: 180px;
+    }
+} 

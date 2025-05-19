@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Finance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="account-header">
+            <div class="header-top">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1>Account Finance</h1>
+                <a href="#" class="help-btn">
+                    <i class="fas fa-question-circle"></i>
+                </a>
+            </div>
+            <div class="account-balance">
+                <h2>Rp. 25.550.000,-</h2>
+                <p class="date">12 June 2022</p>
+            </div>
+        </header>
+
+        <section class="statistics-section">
+            <div class="section-header">
+                <h2>Statistics</h2>
+                <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="chart-container">
+                <div class="y-axis">
+                    <div class="tick">5M</div>
+                    <div class="tick">4M</div>
+                    <div class="tick">3M</div>
+                    <div class="tick">2M</div>
+                    <div class="tick">1M</div>
+                </div>
+                <div class="chart">
+                    <canvas id="financeChart"></canvas>
+                    <div class="x-axis">
+                        <div class="month">Jan</div>
+                        <div class="month">Feb</div>
+                        <div class="month active">Mar</div>
+                        <div class="month">Apr</div>
+                        <div class="month">May</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="section-header">
+                <h2>History</h2>
+                <div class="filter">
+                    <span>Category</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="activity-list">
+                <div class="activity-item deposit">
+                    <div class="activity-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-main">
+                            <div>
+                                <h3>Deposit</h3>
+                                <p class="amount deposit-amount">Rp15.510.000,-</p>
+                            </div>
+                            <div class="activity-date">
+                                <p>11 March 2022</p>
+                                <p class="time">11:21 AM</p>
+                            </div>
+                        </div>
+                        <div class="activity-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bank Mandiri ATM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-item withdraw">
+                    <div class="activity-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-main">
+                            <div>
+                                <h3>Withdraw</h3>
+                                <p class="amount withdraw-amount">Rp15.510.000,-</p>
+                            </div>
+                            <div class="activity-date">
+                                <p>11 March 2022</p>
+                                <p class="time">11:22 AM</p>
+                            </div>
+                        </div>
+                        <div class="activity-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bank Mandiri ATM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-item withdraw">
+                    <div class="activity-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-main">
+                            <div>
+                                <h3>Withdraw</h3>
+                                <p class="amount withdraw-amount">Rp15.510.000,-</p>
+                            </div>
+                            <div class="activity-date">
+                                <p>11 March 2022</p>
+                                <p class="time">11:22 AM</p>
+                            </div>
+                        </div>
+                        <div class="activity-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bank Mandiri ATM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="add-transaction-btn" class="add-transaction-btn">
+                <i class="fas fa-plus"></i> Add Transaction
+            </button>
+        </section>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="fas fa-history"></i>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-comment"></i>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user"></i>
+            </a>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
+</html> 
